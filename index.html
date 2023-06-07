@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+        background-color: darkslategrey;
+    }
+
+    h1 {
+        color: skyblue;
+    }
+
+    h5 {
+            color: green;
+            background-color: yellow;
+        }
+
+    input[type="submit"] {
+            background-color: red;
+            color: white;
+            margin: 4px;
+        }
+
+</style>
+</head>
+
+<!--##NO predefine-->
+<body>
+ <h1>Advance Calculator</h1>
+    <br>
+    <img src="{{url_for('static', filename='img.png') }}" height="200" width="200"><br><br>
+
+    <form method="POST">
+        <label for="text">Enter expression</label>
+        <br>
+        <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
+            <option>Choose Operation</option>
+            <option value="simplify">Simplify</option>
+            <option value="factor">Factor</option>
+        </select>
+        <br>
+        <input type="text" placeholder="Expression" name="text">
+        <br>
+        <input type="submit">
+    </form>
+    <p>Your equation is {{equation}} = {{ result }}</p><br><br>
+    <footer>
+        <h5>Created By - Arkoneil Ghosh</h5>
+    </footer>
+</body>
+</html>
